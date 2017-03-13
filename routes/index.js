@@ -26,31 +26,21 @@ admin.initializeApp({
 var db = admin.database();
 
 router.get('/query_customer', function(req,res,next){
-      console.log("here");
       var theUrl = url.parse( req.url );
-      console.log(theUrl);
-      var queryObj = queryString.parse( theUrl.query );
-      console.log(queryObj);
-      var obj = JSON.parse( queryObj );
-
+      var obj = queryString.parse( theUrl.query );
       var ref = db.ref("Customer");
-      console.log("here2");
-      console.log(obj);
 
       switch(obj.query){
             case "single":
-                  ref.orderByChild("lastname").startAt(obj.lastname).on("value", function(snapshot){
+                  ref.orderByChild("lastname").equalTo(obj.lastname).on("value", function(snapshot){
                         res.json(snapshot);
                   });
                   break;
             default:
-                  var ref = db.ref("Customer");
                   ref.orderByChild("lastname").on("value", function(snapshot){
                         res.json(snapshot);
                   });
       }
-
-
 });
 
 router.post('/new_customer', function(req,res,next){
@@ -94,6 +84,24 @@ router.post('/update_customer', function (req,res,next){
       });
 });
 
+router.get('/query_employee', function(req,res,next){
+      var theUrl = url.parse( req.url );
+      var obj = queryString.parse( theUrl.query );
+      var ref = db.ref("Employee");
+
+      switch(obj.query){
+            case "single":
+                  ref.orderByChild("lastname").equalTo(obj.lastname).on("value", function(snapshot){
+                        res.json(snapshot);
+                  });
+                  break;
+            default:
+                  ref.orderByChild("lastname").on("value", function(snapshot){
+                        res.json(snapshot);
+                  });
+      }
+});
+
 router.post('/new_employee', function(req,res,next){
       var ref = db.ref("Employee");
       var data = {};
@@ -129,6 +137,24 @@ router.post('/update_employee', function (req,res,next){
                   res.json({"status":"data saved",data:data});
             }
       });
+});
+
+router.get('/query_job_order', function(req,res,next){
+      var theUrl = url.parse( req.url );
+      var obj = queryString.parse( theUrl.query );
+      var ref = db.ref("Job Order");
+
+      switch(obj.query){
+            case "single":
+                  ref.orderByChild("customerid").equalTo(obj.customerid).on("value", function(snapshot){
+                        res.json(snapshot);
+                  });
+                  break;
+            default:
+                  ref.orderByChild("jonumber").on("value", function(snapshot){
+                        res.json(snapshot);
+                  });
+      }
 });
 
 router.post('/new_job_order', function(req,res,next){
@@ -172,6 +198,66 @@ router.post('/update_job_order', function (req,res,next){
       });
 });
 
+router.get('/query_parts', function(req,res,next){
+      var theUrl = url.parse( req.url );
+      var obj = queryString.parse( theUrl.query );
+      var ref = db.ref("Parts");
+
+      switch(obj.query){
+            case "single":
+                  ref.orderByChild("date").equalTo(obj.date).on("value", function(snapshot){
+                        res.json(snapshot);
+                  });
+                  break;
+            default:
+                  ref.orderByChild("date").on("value", function(snapshot){
+                        res.json(snapshot);
+                  });
+      }
+});
+
+router.post('/new_parts', function(req,res,next){
+      var ref = db.ref("Parts");
+      var data = {};
+      data["name"] =  req.body.name;
+      data["date"] =  req.body.date;
+      data["quantity"] =  req.body.quantity;
+      data["amount"] =  req.body.amount;
+      data["totalamount"] =  req.body.totalamount;
+      data["receiptnumber"] =  req.body.receiptnumber;
+      data["manufacturer"] =  req.body.manufacturer;
+
+      var saveRef = ref.push();
+
+      saveRef.set(data, function(error){
+            if(error){
+                  res.json({"error":error});
+            } else {
+                  data["id"] = saveRef.key;
+                  res.json({"status":"data saved",data:data});
+            }
+      });
+});
+
+router.post('/update_parts', function (req,res,next){
+      var child = db.ref("Job Order").child(req.body.id);
+      var data = {};
+      data["name"] =  req.body.name;
+      data["date"] =  req.body.date;
+      data["quantity"] =  req.body.quantity;
+      data["amount"] =  req.body.amount;
+      data["totalamount"] =  req.body.totalamount;
+      data["receiptnumber"] =  req.body.receiptnumber;
+      data["manufacturer"] =  req.body.manufacturer;
+      
+      child.update(data, function(error){
+            if(error){
+                  res.json({"error":error});
+            } else {
+                  res.json({"status":"data saved",data:data});
+            }
+      });
+});
 
 
 
