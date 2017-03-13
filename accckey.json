@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "arcenalcarcarecenterserver",
+  "private_key_id": "3a053ac196b0a9eaa8129cfc8a5a7b97bf875de1",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC+dnnWbZMiPNuS\nSzi2Ix3wf01z5Eob/dCY62NN7l+MWTjo5XzsWcis8SGrTtIVFr5DBPME27g0tcXG\nwqDG2zjxNWAgXwiwWDxK0kc7ZBghmd6iWjrtMNNncYoDzK7xVRBDIA6+7y0RkbLU\nMZGU36BRHpVSpJIQnj/w5/EnM280+SU2qaaJ8haaAzvT+VcpLbRuJSDfr/SU9iqE\nF7FGi/jH7QzDbQR1OlISTEEMlQW1Qo4DuhgM5UbTVJASSfBB9whArcyA4L4iykO5\n4acsM5oPfuboASuEa7UKeK0OGYn4f8lNc7b/KKrnvwtZYp5PwcTG8yLuJEtmFKl5\nUh0YCSzHAgMBAAECggEAMzry8rZuiRsNhIAvNO6lMvdLAg050eWnojpOb7vaf4nQ\nQPTZcUmFLN9/SvDcmUeQzb4bEAd5uNPb6uaXEGYPHvJYdNybHbPeI9IDzvnRc9hL\nhif3Ca3Eb2Ke2P7JX6idwzBwRvNWkA88ps7edcjg+nDbgWs6zrWCRW5d80lmdDzI\nwQ/SyK8se/ykIFPrFrHCn+oeHC1JR2kN8rPyRL1bMBKXSoCYIloq78hqfzoLuf7P\nhP/YoC+Q4VpguzSh2odgVDneYmvJ5wNdYEmu2TRK7eak8lrdAFpNbSAo/vg03pV4\nNAaUBchOpbHlSgPuTmb+KHtTN56JhgU5ILytJzRSYQKBgQDqcG+j4j37nTx5kQF+\ncgPqDAFYS5fmUCDGcqf+93GPrtWrsEUY7CW/2I8LSo/F5liogP9PFixFjBo3DjU4\nDudxPdhDFc2T9Gwf/EEdi5a6rbn8pe9RVbYJ0SWgoLXWIHmws0hVLBbKPBBXVmTt\npO+2i+pxwVjjD1cMxPfu932gpQKBgQDP+qxGQ4dq7jzaWsi+mGvva4objg+6Uc/L\naaWIAov588WoGi+5Ta33cnGaQfvLvrpbfjU2wJSgI7AfbSUV2gzRdGzSX9UBIRrd\nzl7Z3XHibcVWo24qalHJjg3GcTS15QB6oqsP2ug4paIczmcAY9/faw1m1fvHig1D\n23pzUDcP+wKBgHoeW2kIvrTEcO36JMcS6QsPedvedJ+Z+ZilvPDJQDRSJCcsyLF0\nwS0vx0NgcYfqtx//If62VBVeJ4GqOvqaeOC6EF7RiqaZWYFHyztyrO9M82axoPnD\nJfHzKiCD1nRVsk3i9bi4IJ7zrqdv718C3YM/Wr4qsvyDzxptt6CY9q2pAoGBAM8G\n83gZ/nHF5tNg7VU0erTgMqENP8CzcYpFht4l0tqj+0xDjOADYDniNQ1dw1zkZbNv\npV70Qr5J6CbQScs/u+S/5RdhB7JRFuJWbHqogZXouThuBNq57OIawsGXrOWnqFtr\nE6b7vI+u6PmNyGBOCurmMHf+Z9wQIvY6QuEIp1cDAoGBAL8229DkZN7uE2KK43NM\nqZQ0kKb8W8KMJaxIN7N+tZqvL7Vgg2u3xb9TWCjyzny91MjdYgOj9cdoTW6s7yg/\neNrKUblGyWIkue7LZ7hUvZQ12JxsepDjDm62UtgY3ZdhqYwTUsPiPiTF5Vd4VPSb\nVAbunH/5fiI46n+A5xnfESSV\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-8m9mp@arcenalcarcarecenterserver.iam.gserviceaccount.com",
+  "client_id": "113605171299595300003",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-8m9mp%40arcenalcarcarecenterserver.iam.gserviceaccount.com"
+}
