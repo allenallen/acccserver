@@ -167,9 +167,9 @@ router.post('/new_job_order', function(req,res,next){
       data["partsids"] =  req.body.partsids;
       data["labor"] =  req.body.labor;
       data["totalamount"] = req.body.totalamount;
-      data["isPaid"] = req.body.ispaid;
+      data["ispaid"] = req.body.ispaid;
       data["paymentdate"] = req.body.paymentdate;
-      data["isReleased"] = req.body.isreleased;
+      data["isreleased"] = req.body.isreleased;
 
       ref.set(data, function(error){
             if(error){
