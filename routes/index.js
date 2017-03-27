@@ -166,7 +166,10 @@ router.post('/new_job_order', function(req,res,next){
       data["jobdescription"] =  req.body.jobdescription;
       data["partsids"] =  req.body.partsids;
       data["labor"] =  req.body.labor;
-      data["totalamount"] =  req.body.totalamount;
+      data["totalamount"] = req.body.totalamount;
+      data["isPaid"] = req.body.ispaid;
+      data["paymentdate"] = req.body.paymentdate;
+      data["isReleased"] = req.body.isreleased;
 
       ref.set(data, function(error){
             if(error){
@@ -188,6 +191,9 @@ router.post('/update_job_order', function (req,res,next){
       data["partsids"] =  req.body.partsids;
       data["labor"] =  req.body.labor;
       data["totalamount"] =  req.body.totalamount;
+      data["isPaid"] = req.body.ispaid;
+      data["paymentdate"] = req.body.paymentdate;
+      data["isReleased"] = req.body.isreleased;
 
       child.update(data, function(error){
             if(error){
