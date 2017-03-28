@@ -170,6 +170,7 @@ router.post('/new_job_order', function(req,res,next){
       data["ispaid"] = req.body.ispaid;
       data["paymentdate"] = req.body.paymentdate;
       data["isreleased"] = req.body.isreleased;
+      data["amount"] = req.body.amount;
 
       ref.set(data, function(error){
             if(error){
